@@ -19,7 +19,7 @@ gulp.task('server', function() {
 });
 
 gulp.task('styles', function() {
-    return gulp.src("src/sass/main.+(scss|sass)")
+    return gulp.src("src/sass/core.+(scss|sass)")
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(gulp.dest("dist/css"))
