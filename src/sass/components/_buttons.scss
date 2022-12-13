@@ -1,3 +1,15 @@
 .button {
-
+    min-width: 185px;
+    min-height: 44px;
+    padding: 12px 42px;
+    border: 2px solid $light-color;
+    color: $light-color;
+    background-color: transparent;
+    border-radius: 25px 25px 25px 0;
+    @include serif-font;
+    transition: 0.2s ease-in-out background-color, 0.2s ease-in-out color;
+    &:hover {
+        background-color: $light-color;
+        color: $dark-bg;
+    }
 }

@@ -1,4 +1,122 @@
 .main {
-    background-color: $dark-bg;
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 50px;
     min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    background-color: $dark-bg;
+    &__snowflakes, &__snowflake {
+        position: absolute;
+        display: block;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+        user-select: none;
+    }
+    &__snowflake {
+        bottom: 0;
+        left: -130px;
+        width: 445px;
+        max-height: 445px;
+        animation: 20s linear rotate_snowflake infinite;
+    }
+    .container {
+        z-index: 1;
+        width: 100%;
+        min-height: 100%;
+    }
+    &__left-side {
+        padding-right: 51%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100%;
+    }
+    &__title {
+        font-size: 72px;
+        line-height: 1.15;
+        margin-bottom: 20px;
+    }
+    &__descr {
+        font-size: 38px;
+        line-height: 1.15;
+    }
+    &__button--mg30 {
+        margin-top: 30px;
+    }
+    &__arrow-link {
+        display: block;
+        background: url('../../icons/main/arrow.svg') center center/cover no-repeat;
+        width: 30px;
+        height: 30px;
+        margin-top: auto;
+        cursor: pointer;
+        animation: 1.3s linear trasnform_arrow infinite forwards; 
+        transition: 0.2s ease-in-out filter;
+        &:hover {
+            transform: translateY(2px);
+            filter:drop-shadow(1px 1px 6px rgba($light-color, .6));
+        }
+    }
+
+    &__santa {
+        position: absolute;
+        top: 200px;
+        bottom: 0;
+        right: 0;
+        left: 50%;
+    }
+    .santa__text-block {
+        position: absolute;
+        max-width: 50%;
+        top: 40%;
+        left: 15%;
+        z-index: 1;
+        background-color: $light-color;
+        padding: 60px;
+        padding-left: 40px;
+        background: url('../../icons/main/dialog.svg') center center/contain no-repeat;
+        filter: drop-shadow(0px 0px 10px rgba($light-color, .4));
+        overflow: hidden;
+        user-select: none;
+        pointer-events: none;
+    }
+    .santa__text-descr {
+        color: $dark-bg;
+        font-size: 18px;
+    }
+    .santa__img {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-position: center right;
+        z-index: 0;
+        user-select: none;
+        pointer-events: none;
+    }
+}
+
+@keyframes rotate_snowflake {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes trasnform_arrow {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: rotate(0);
+    }
 }

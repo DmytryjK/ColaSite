@@ -2,14 +2,19 @@
 @import './helpers/variables';
 @import './helpers/mixins';
 
+
+@import './components/buttons';
 @import './components/header';
 @import './components/main';
 
 * {
     @include cursive-font;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.conteiner {
+.container {
     margin: 0 auto;
     padding: 0 20px;
     max-width: 1325px;
