@@ -1,0 +1,278 @@
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+.header {
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 43px 20px;
+  max-width: 1385px;
+}
+.header .navigation {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: end;
+  padding-right: 140px;
+}
+.header .navigation__list {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.header .navigation__link {
+  position: relative;
+  display: block;
+  padding: 5px 30px;
+  min-width: 30px;
+  font-size: 16px;
+  background-color: #141429;
+  color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+}
+.header .navigation__link:before, .header .navigation__link:after {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  transition: 0.2s ease-in-out all;
+}
+.header .navigation__link:before {
+  content: attr(data-text);
+  color: white;
+}
+.header .navigation__link:after {
+  content: attr(title);
+  color: #D02B2B;
+  top: 150%;
+}
+.header .navigation__link:hover:before {
+  top: -50%;
+}
+.header .navigation__link:hover:after {
+  top: 50%;
+}
+.header .burger-menu {
+  min-width: 60px;
+  height: 60px;
+  background-color: #D02B2B;
+  border-radius: 50% 10px 50% 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.125rem 0;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.header .burger-menu span {
+  display: block;
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s ease-in-out all;
+}
+.header .burger-menu:focus span:first-child {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+.header .burger-menu:focus span:nth-child(3n+2) {
+  transform: translateX(calc(100% + 60px));
+  opacity: 0;
+  visibility: hidden;
+}
+.header .burger-menu:focus span:last-child {
+  transform: rotate(45deg) translateY(-6px) translateX(-6px);
+}
+
+.main {
+  background-color: #141429;
+  min-height: 100vh;
+}
+
+* {
+  font-family: "Risque", cursive;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.conteiner {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1325px;
+}

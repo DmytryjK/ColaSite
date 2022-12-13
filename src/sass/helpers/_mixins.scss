@@ -1,0 +1,11 @@
+@mixin cursive-font {
+    font-family: 'Risque', cursive;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+@mixin serif-font {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+}

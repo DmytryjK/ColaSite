@@ -1,0 +1,16 @@
+@import './helpers/normilize';
+@import './helpers/variables';
+@import './helpers/mixins';
+
+@import './components/header';
+@import './components/main';
+
+* {
+    @include cursive-font;
+}
+
+.conteiner {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1325px;
+}
