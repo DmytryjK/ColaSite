@@ -1,0 +1,105 @@
+.write-us {
+    min-height: 100vh;
+    background: url('../../images/letter/letter-bg.png') center center/cover no-repeat;
+    padding-top: 200px;
+    padding-bottom: 160px;
+    display: flex;
+    align-items: center;
+    .container {
+        flex-basis: 100%;
+    }
+    &__title {
+        font-size: 56px;
+        line-height: 65px;
+        max-width: 480px;
+    }
+    .form {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr, 1fr, 2fr;
+        gap: 20px;
+        margin-top: 30px;
+        max-width: 480px;
+        border-radius: 10px;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            background-color: rgba($dark-bg, 0.3);
+            filter: blur(5px);
+        }
+        * {
+            z-index: 1;
+            @include serif-font;
+        }
+        &__name, &__phone, &__gender, &__email, &__text {
+            background-color: transparent;
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 10px;
+            &:focus {
+                outline-color: $accent-color;
+                transition: 0.2s ease-in-out outline-color;
+                &::placeholder {
+                    color: lightgray;
+                    transition: 0.2s ease-in-out color;
+                }
+            }
+            &::placeholder {
+                color: $light-color;
+            }
+            &__agreement {
+                border: none;
+            }
+        }
+        &__gender option {
+            @include serif-font;
+            background-color: $dark-bg;
+        }
+        &__text {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            resize: none;
+        }
+        &__label-agreement {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+            padding-left: 30px;
+            color: $accent-color;
+        }
+        &__agreement {
+            position: relative;
+            appearance: none;
+            &:checked ~ .custom-checkbox {
+                background-color: $light-color;
+                &:before {
+                    content: url('../../icons/letter/Checkbox-checked.svg'); 
+                    position: absolute;
+                    top: -2px;
+                    left: 2px;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+            &:focus ~ .custom-checkbox {
+                border: 2px solid grey;
+            }
+        }
+        .custom-checkbox {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid $accent-color;
+            border-radius: 5px;
+            left: 0;
+        }
+    }
+}

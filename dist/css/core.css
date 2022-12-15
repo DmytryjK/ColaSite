@@ -494,6 +494,117 @@ details {
   justify-self: center;
 }
 
+.write-us {
+  min-height: 100vh;
+  background: url("../../images/letter/letter-bg.png") center center/cover no-repeat;
+  padding-top: 200px;
+  padding-bottom: 160px;
+  display: flex;
+  align-items: center;
+}
+.write-us .container {
+  flex-basis: 100%;
+}
+.write-us__title {
+  font-size: 56px;
+  line-height: 65px;
+  max-width: 480px;
+}
+.write-us .form {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr, 1fr, 2fr;
+  gap: 20px;
+  margin-top: 30px;
+  max-width: 480px;
+  border-radius: 10px;
+}
+.write-us .form:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-color: rgba(20, 20, 41, 0.3);
+  filter: blur(5px);
+}
+.write-us .form * {
+  z-index: 1;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+}
+.write-us .form__name, .write-us .form__phone, .write-us .form__gender, .write-us .form__email, .write-us .form__text {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+}
+.write-us .form__name:focus, .write-us .form__phone:focus, .write-us .form__gender:focus, .write-us .form__email:focus, .write-us .form__text:focus {
+  outline-color: #D02B2B;
+  transition: 0.2s ease-in-out outline-color;
+}
+.write-us .form__name:focus::placeholder, .write-us .form__phone:focus::placeholder, .write-us .form__gender:focus::placeholder, .write-us .form__email:focus::placeholder, .write-us .form__text:focus::placeholder {
+  color: lightgray;
+  transition: 0.2s ease-in-out color;
+}
+.write-us .form__name::placeholder, .write-us .form__phone::placeholder, .write-us .form__gender::placeholder, .write-us .form__email::placeholder, .write-us .form__text::placeholder {
+  color: #fff;
+}
+.write-us .form__name__agreement, .write-us .form__phone__agreement, .write-us .form__gender__agreement, .write-us .form__email__agreement, .write-us .form__text__agreement {
+  border: none;
+}
+.write-us .form__gender option {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #141429;
+}
+.write-us .form__text {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  resize: none;
+}
+.write-us .form__label-agreement {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  padding-left: 30px;
+  color: #D02B2B;
+}
+.write-us .form__agreement {
+  position: relative;
+  -webkit-appearance: none;
+          appearance: none;
+}
+.write-us .form__agreement:checked ~ .custom-checkbox {
+  background-color: #fff;
+}
+.write-us .form__agreement:checked ~ .custom-checkbox:before {
+  content: url("../../icons/letter/Checkbox-checked.svg");
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  right: 0;
+  bottom: 0;
+}
+.write-us .form__agreement:focus ~ .custom-checkbox {
+  border: 2px solid grey;
+}
+.write-us .form .custom-checkbox {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #D02B2B;
+  border-radius: 5px;
+  left: 0;
+}
+
 * {
   font-family: "Risque", cursive;
   font-weight: 400;
