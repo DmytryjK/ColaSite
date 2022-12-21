@@ -101,5 +101,19 @@
             border-radius: 5px;
             left: 0;
         }
+        .submit-letter {
+            position: absolute;
+            right: 0;
+            background-color: transparent;
+            border: 2px solid $light-color;
+            border-radius: 5px;
+            min-width: 100px;
+            padding: 3px 15px;
+            transition: 0.2s ease-in-out background-color, 0.2s ease-in-out color;
+            &:hover {
+                background-color: $light-color;
+                color: $dark-bg;
+            }
+        }
     }
 }
