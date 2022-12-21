@@ -192,6 +192,11 @@ details {
   width: 100%;
   z-index: 999;
 }
+.header_scroll-active {
+  background-color: #141429;
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.6);
+  transition: 0.3s ease-in-out background-color, 0.3s ease-in-out box-shadow;
+}
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -669,4 +674,24 @@ details {
   margin: 0 auto;
   padding: 0 20px;
   max-width: 1325px;
+}
+
+.section1 {
+  background-color: red;
+  height: 100vh;
+}
+
+.section2 {
+  background-color: blue;
+  height: 100vh;
+}
+
+.section3 {
+  background-color: yellow;
+  height: 100vh;
+}
+
+.section4 {
+  background-color: red;
+  height: 100vh;
 }

@@ -3,6 +3,11 @@
     position: fixed;
     width: 100%;
     z-index: 999;
+    &_scroll-active {
+        background-color: $dark-bg; 
+        box-shadow: 0 0 35px rgba(255, 255, 255, .6); 
+        transition: 0.3s ease-in-out background-color, 0.3s ease-in-out box-shadow;
+    }
     &__container {
         display: flex;
         justify-content: space-between;
